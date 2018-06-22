@@ -41,5 +41,13 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 7)
   })
 
+  it('should a running total of 2 when using the operatorClick + for 1 and 1', function(){
+    calculator.numberClick(1)
+    calculator.operatorClick('+')
+    calculator.numberClick(1)
+    calculator.operatorClick('=')
+    assert.equal(calculator.runningTotal, 2)
+  })
+
 
 });
