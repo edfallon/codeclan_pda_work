@@ -49,5 +49,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 2)
   })
 
+  it('should clear the running total when using clearClick', function(){
+    calculator.previousTotal = 10
+    calculator.clearClick()
+    assert.equal(calculator.runningTotal, 0)
+  })
+
 
 });
