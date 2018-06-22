@@ -29,5 +29,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 10)
   })
 
+  it('should equal 5 when dividing 10 by 2', function(){
+    calculator.previousTotal = 10
+    calculator.divide(2)
+    assert.equal(calculator.runningTotal, 5)
+  })
+
 
 });
