@@ -17,4 +17,10 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 6)
   })
 
+  it('should equal 2 when subtracting 2 from 4', function(){
+    calculator.previousTotal = 4
+    calculator.subtract(2)
+    assert.equal(calculator.runningTotal, 2)
+  })
+
 });
