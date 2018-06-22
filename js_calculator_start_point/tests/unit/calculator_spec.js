@@ -23,4 +23,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 2)
   })
 
+  it('should equal 10 when muliplying 2 and 5 ', function(){
+    calculator.previousTotal = 2
+    calculator.multiply(5)
+    assert.equal(calculator.runningTotal, 10)
+  })
+
+
 });
