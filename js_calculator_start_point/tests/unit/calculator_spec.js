@@ -35,5 +35,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 5)
   })
 
+  it('should have a running total of 7 when 7 is clicked', function(){
+    calculator.previousTotal = 0
+    calculator.numberClick(7)
+    assert.equal(calculator.runningTotal, 7)
+  })
+
 
 });
