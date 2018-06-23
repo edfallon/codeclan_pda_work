@@ -35,4 +35,13 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('3')
   })
 
+  it('should equal 5 when adding 1 and 4', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#operator_add')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('5')
+  })
+
 });
