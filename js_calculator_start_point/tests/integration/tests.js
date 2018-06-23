@@ -53,4 +53,17 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('3')
   })
 
+  it('should have a running total of 12345678 when pressing those numbers', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number1')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#number4')).click();
+    element(by.css('#number5')).click();
+    element(by.css('#number6')).click();
+    element(by.css('#number7')).click();
+    element(by.css('#number8')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('12345678')
+  })
+
 });
