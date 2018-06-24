@@ -55,5 +55,11 @@ describe('calculator', function () {
     assert.equal(calculator.runningTotal, 0)
   })
 
+  it('should return error if divide number is 0', function(){
+    calculator.previousTotal = 10
+    calculator.divide(0)
+    assert.equal(calculator.runningTotal, "error")
+  })
+
 
 });
